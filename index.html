@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talluri Subhash - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Talluri Subhash</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="darkModeToggle">Dark Mode</button>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="hero-section">
+            <h1>Hi, I\\\'m Talluri Subhash</h1>
+            <p class="typing-text"></p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn">View Projects</a>
+                <a href="./assets/finalresume.pdf" target="_blank" class="btn">View Resume</a>
+            </div>
+        </section>
+
+        <section id="about" class="about-me-section">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="./assets/profile.png" alt="Profile Image" class="profile-image">
+                <p>Hello! I\\\'m Talluri Subhash, a passionate Full Stack Developer and DSA Enthusiast. I enjoy transforming complex problems into elegant solutions through code.</p>
+                <p>My journey in technology has equipped me with a diverse skill set, allowing me to work seamlessly across both front-end and back-end development. I am constantly exploring new technologies and frameworks to stay updated with the latest industry trends.</p>
+                <h3>Education</h3>
+                <ul>
+                    <li>Gayatri Vidya Parishad College of Engineering (Autonomous) Visakhapatnam, India - B.Tech in Information Technology (Aug 2022 – May 2026) - CGPA: 8.5</li>
+                    <li>Sasi Junior College Nidadavole, India - Intermediate (MPC) (Apr 2020 – May 2022)</li>
+                </ul>
+                <h3>Work Experience</h3>
+                <ul>
+                    <li><strong>Android Developer Virtual Internship</strong> (Apr 2025 – Jun 2025)<br>Learned the basics of Android app development using Java and Android Studio. Developed a Resume Builder App that allows users to enter personal and academic details and generates a professional PDF resume. Designed a user-friendly interface with input fields and buttons using XML layouts. Worked with Android activity lifecycle and used local storage to manage data.</li>
+                    <li><strong>Data Science Virtual Internship</strong> (Apr 2024 – Jun 2024)<br>Gained practical understanding of basic machine learning concepts like supervised learning, data preprocessing, and model evaluation. Worked on a guided mini-project to predict loan default using logistic regression and cleaned real-world datasets using Python (Pandas, NumPy). Used Python and Pandas to work with real-world datasets like customer information and loan status. Understood how machine learning can help businesses make better decisions using data.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <h2>My Projects</h2>
+            <div class="project-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="js">JavaScript</button>
+                <button class="filter-btn" data-filter="react">React</button>
+                <button class="filter-btn" data-filter="mongodb">MongoDB</button>
+            </div>
+            <div class="project-grid">
+                <!-- Project Cards will be inserted here by JavaScript -->
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>C++</li>
+                        <li>C</li>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>React.js</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <ul>
+                        <li>MongoDB</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Coursework</h3>
+                    <ul>
+                        <li>Data Structures and Algorithms</li>
+                        <li>DBMS</li>
+                        <li>Operating Systems</li>
+                        <li>Computer Networks</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="achievements-section">
+            <h2>Achievements & Certifications</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Solved 500+ DSA Problems</h3>
+                        <p class="date">LeetCode, GFG, CodeChef</p>
+                        <p>Regular participant in LeetCode Weekly Contests and CodeChef Long Challenges. Strong grasp on Hash maps, Two Pointers, binary search, and stack-based problems. Achieved a peak LeetCode rating of 1500+.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume" class="resume-section">
+            <h2>My Resume</h2>
+            <p>Click the button below to view my full resume in a new tab.</p>
+            <a href="./assets/finalresume.pdf" target="_blank" class="btn">View Resume (PDF)</a>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contact Me</h2>
+            <div class="contact-content">
+                <form class="contact-form" action="https://formsubmit.co/subhashtalluri68@gmail.com" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> subhashtalluri68@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +91 9032615075</p>
+                    <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/tallurisubhash" target="_blank">linkedin.com/in/tallurisubhash</a></p>
+                    <p><i class="fab fa-github"></i> <a href="https://github.com/Subhash-2005" target="_blank">github.com/Subhash-2005</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/tallurisubhash" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Subhash-2005" target="_blank"><i class="fab fa-github"></i></a>
+            <!-- Add other social links as needed -->
+        </div>
+        <p>&copy; 2025 Talluri Subhash. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="./js/projects.js"></script>
+</body>
+</html>
+
