@@ -1,27 +1,58 @@
 document.addEventListener("DOMContentLoaded", () => {
     const projectGrid = document.querySelector(".project-grid");
     const filterButtons = document.querySelectorAll(".filter-btn");
+    const projectModal = document.getElementById("projectModal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalDescription = document.getElementById("modalDescription");
+    const modalTechStack = document.getElementById("modalTechStack");
+    const modalLiveLink = document.getElementById("modalLiveLink");
+    const modalGithubLink = document.getElementById("modalGithubLink");
+    const closeButton = document.querySelector(".close-button");
 
     const projects = [
         {
             id: 1,
-            name: "Learn Hub – Online Learning Platform",
-            description: "Built a scalable full-stack e-learning web application using HTML, CSS, JavaScript (Frontend) and Node.js, Express.js, MongoDB (Backend). Developed RESTful APIs for user registration, login, and course management using Express.js and Mongoose. Implemented secure authentication and authorization using JWT for token-based access and bcrypt for password hashing. Planning enhancements like role-based dashboards, course progress tracking, quizzes, and certification features.",
-            image: "./assets/elearning.png", // changed image
-            techStack: ["HTML", "CSS", "JavaScript", "Node.js", "Express.js", "MongoDB", "JWT", "Bcrypt"],
-            categories: ["js", "mongodb"],
-            liveLink: "#",
-            githubLink: "#"
+            name: "Learn Hub – E-Learning Platform",
+            description: "Developed a scalable MERN stack e-learning platform with role-based access, course management, and secure authentication.",
+            image: "./assets/elearning.png",
+            techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Firebase"],
+            categories: ["mern", "mongodb"],
+            liveLink: "https://learning-hub-oowi.onrender.com/",
+            githubLink: "https://github.com/Subhash-2005/Learning_hub",
+            features: [
+                "Role-based login for Admin, Instructor, and Student",
+                "Admin course management with Add/Edit/Delete",
+                "Secure JWT authentication and protected APIs",
+                "Responsive dashboard and modern UI"
+            ],
+            responsibilities: [
+                "Built frontend with React.js and ensured responsive UI",
+                "Implemented backend APIs using Node.js and Express.js",
+                "Integrated MongoDB and Firebase Authentication",
+                "Designed data models and course management logic"
+            ]
         },
         {
             id: 2,
-            name: "Quiz App – React/Vite Single-Page Application",
-            description: "Developed an interactive quiz platform using React.js with a Node.js + Express.js backend and MongoDB. Implemented a countdown timer, hint feature, and persistent high-score tracking using localStorage and Firebase. Integrated Firebase Authentication for secure user login and quiz participation. Planned Features: Role-based access with admin-created quizzes, unique join codes for students, and an admin dashboard for quiz creation, question management, and analytics.",
-            image: "./assets/quiz.png", // changed image
-            techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Firebase", "Vite"],
-            categories: ["react", "mongodb"],
-            liveLink: "#",
-            githubLink: "#"
+            name: "Quiz App – Full Stack Quiz Platform",
+            description: "Built a full-stack quiz platform with secure authentication, admin quiz creation, performance tracking, and analytics.",
+            image: "./assets/quiz.png",
+            techStack: ["React.js", "Vite", "Node.js", "Express.js", "MongoDB", "JWT", "Firebase"],
+            categories: ["mern", "react", "mongodb"],
+            liveLink: "https://quiz-frontend-0g4l.onrender.com/",
+            githubLink: "https://github.com/Subhash-2005/quiz",
+            features: [
+                "User authentication and authorization",
+                "Admin-created quizzes and access control",
+                "Leaderboard and performance analytics",
+                "Automatic scoring and quiz history"
+            ],
+            responsibilities: [
+                "Developed frontend with React.js and Vite",
+                "Created backend endpoints using Express.js",
+                "Managed secure sessions with JWT",
+                "Optimized data loading and quiz flow"
+            ]
         }
     ];
 
@@ -37,14 +68,33 @@ document.addEventListener("DOMContentLoaded", () => {
                 <img src="${project.image}" alt="${project.name}">
                 <div class="project-card-content">
                     <h3>${project.name}</h3>
-                    <p>${project.description.substring(0, 150)}...</p> <!-- Truncate for card view -->
+                    <p>${project.description.substring(0, 150)}...</p>
                     <div class="tech-stack">
                         ${project.techStack.map(tech => `<span>${tech}</span>`).join("")}
+                    </div>
+                    <div class="project-buttons">
+                        <a href="${project.liveLink}" target="_blank" class="btn">Live Demo</a>
+                        <a href="${project.githubLink}" target="_blank" class="btn">GitHub</a>
                     </div>
                 </div>
             `;
             projectGrid.appendChild(projectCard);
         });
+    }
+
+    function openModal(project) {
+        modalTitle.textContent = project.name;
+        modalDescription.textContent = project.description;
+        modalTechStack.innerHTML = project.techStack.map(tech => `<span>${tech}</span>`).join("");
+        document.getElementById("modalFeatures").innerHTML = project.features.map(feature => `<li>${feature}</li>`).join("");
+        document.getElementById("modalResponsibilities").innerHTML = project.responsibilities.map(item => `<li>${item}</li>`).join("");
+        modalLiveLink.href = project.liveLink;
+        modalGithubLink.href = project.githubLink;
+        projectModal.style.display = "flex";
+    }
+
+    function closeModal() {
+        projectModal.style.display = "none";
     }
 
     // Initial display
@@ -59,16 +109,22 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Project Modal (simplified for now, will be expanded)
     projectGrid.addEventListener("click", (e) => {
+        if (e.target.tagName.toLowerCase() === "a") return;
         const card = e.target.closest(".project-card");
         if (card) {
-            const projectId = parseInt(card.dataset.id);
+            const projectId = parseInt(card.dataset.id, 10);
             const project = projects.find(p => p.id === projectId);
             if (project) {
-                // In a real scenario, you\'d populate a modal here
-                alert(`Project: ${project.name}\nDescription: ${project.description}\nTech Stack: ${project.techStack.join(", ")}`);
+                openModal(project);
             }
+        }
+    });
+
+    closeButton.addEventListener("click", closeModal);
+    projectModal.addEventListener("click", (e) => {
+        if (e.target === projectModal) {
+            closeModal();
         }
     });
 });

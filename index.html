@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talluri Subhash - Portfolio</title>
+    <title>Talluri Subhash Satya Sai Manikanta | Full Stack Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -11,9 +11,13 @@
     <header>
         <nav>
             <div class="logo">Talluri Subhash</div>
+            <button id="navToggle" class="nav-toggle" aria-label="Open navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#achievements">Achievements</a></li>
@@ -25,11 +29,12 @@
     </header>
     <main>
         <section id="home" class="hero-section">
-            <h1>Hi, I'm Talluri Subhash</h1>
+            <h1>Hi, I'm Talluri Subhash Satya Sai Manikanta</h1>
+            <p class="hero-subtitle">Full Stack Developer | MERN Stack Developer | DSA Enthusiast</p>
             <p class="typing-text"></p>
             <div class="cta-buttons">
                 <a href="#projects" class="btn">View Projects</a>
-                <a href="./assets/finalresume.pdf" target="_blank" class="btn">View Resume</a>
+                <a href="https://drive.google.com/file/d/1FJBhDCx_6Z2LR26iEMpodNF0uGus0MSz/view?usp=sharing" target="_blank" rel="noreferrer" class="btn">View Latest Resume</a>
             </div>
         </section>
 
@@ -37,26 +42,53 @@
             <h2>About Me</h2>
             <div class="about-content">
                 <img src="./assets/profile.png" alt="Profile Image" class="profile-image">
-                <p>Hello! I\\\'m Talluri Subhash, a passionate Full Stack Developer and DSA Enthusiast. I enjoy transforming complex problems into elegant solutions through code.</p>
-                <p>My journey in technology has equipped me with a diverse skill set, allowing me to work seamlessly across both front-end and back-end development. I am constantly exploring new technologies and frameworks to stay updated with the latest industry trends.</p>
-                <h3>Education</h3>
-                <ul>
-                    <li>Gayatri Vidya Parishad College of Engineering (Autonomous) Visakhapatnam, India - B.Tech in Information Technology (Aug 2022 – May 2026) - CGPA: 8.5</li>
-                    <li>Sasi Junior College Nidadavole, India - Intermediate (MPC) (Apr 2020 – May 2022)</li>
-                </ul>
-                <h3>Work Experience</h3>
-                <ul>
-                    <li><strong>Android Developer Virtual Internship</strong> (Apr 2025 – Jun 2025)<br>Learned the basics of Android app development using Java and Android Studio. Developed a Resume Builder App that allows users to enter personal and academic details and generates a professional PDF resume. Designed a user-friendly interface with input fields and buttons using XML layouts. Worked with Android activity lifecycle and used local storage to manage data.</li>
-                    <li><strong>Data Science Virtual Internship</strong> (Apr 2024 – Jun 2024)<br>Gained practical understanding of basic machine learning concepts like supervised learning, data preprocessing, and model evaluation. Worked on a guided mini-project to predict loan default using logistic regression and cleaned real-world datasets using Python (Pandas, NumPy). Used Python and Pandas to work with real-world datasets like customer information and loan status. Understood how machine learning can help businesses make better decisions using data.</li>
-                </ul>
+                <div class="about-text">
+                    <p>Highly motivated Information Technology student and full-stack web developer with strong expertise in MERN stack development, authentication systems, REST APIs, and responsive UI design. I solve complex problems with clean code and have completed 500+ DSA problems across LeetCode, GeeksforGeeks, and CodeChef.</p>
+                    <p>Currently pursuing B.Tech in Information Technology at GVP College of Engineering with a CGPA of 8.6. Based in Andhra Pradesh, India, I am passionate about building scalable applications and preparing for product-based company roles.</p>
+                    <div class="info-grid">
+                        <div><strong>Location</strong><span>Andhra Pradesh, India</span></div>
+                        <div><strong>Email</strong><span>subhashtalluri68@gmail.com</span></div>
+                        <div><strong>College</strong><span>GVP College of Engineering</span></div>
+                        <div><strong>Degree</strong><span>B.Tech in Information Technology</span></div>
+                        <div><strong>CGPA</strong><span>8.6</span></div>
+                    </div>
+                    <h3>Education</h3>
+                    <ul>
+                        <li>Gayatri Vidya Parishad College of Engineering (Autonomous), Visakhapatnam — B.Tech in Information Technology (2022–2026)</li>
+                        <li>Sasi Junior College, Nidadavole — Intermediate (MPC) (2020–2022)</li>
+                    </ul>
+                    <h3>Internships & Experience</h3>
+                    <ul>
+                        <li><strong>Android Development Virtual Internship</strong> — Developed a resume builder app with Java, Android Studio, and local storage. Built forms, PDF export, and polished UI layouts.</li>
+                        <li><strong>Data Science Virtual Internship</strong> — Worked on loan default prediction using logistic regression, Python, Pandas, NumPy, and data preprocessing techniques.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience-section">
+            <h2>Experience & Internships</h2>
+            <p class="section-description">Practical internship experience across mobile development, data science, and full-stack engineering.</p>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3>Android Development Virtual Internship</h3>
+                    <p><strong>Apr 2025 – Jun 2025</strong></p>
+                    <p>Built a resume builder app using Java and Android Studio. Designed user flows, handled local storage, and generated professional PDF output.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Data Science Virtual Internship</h3>
+                    <p><strong>Apr 2024 – Jun 2024</strong></p>
+                    <p>Worked on loan default prediction using Python, Pandas, NumPy, and logistic regression. Focused on data preprocessing, feature analysis, and model evaluation.</p>
+                </div>
             </div>
         </section>
 
         <section id="projects" class="projects-section">
-            <h2>My Projects</h2>
+            <h2>Projects</h2>
+            <p class="section-description">Featured MERN stack applications with role-based access, modern dashboards, and secure authentication.</p>
             <div class="project-filter">
                 <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="js">JavaScript</button>
+                <button class="filter-btn" data-filter="mern">MERN</button>
                 <button class="filter-btn" data-filter="react">React</button>
                 <button class="filter-btn" data-filter="mongodb">MongoDB</button>
             </div>
@@ -66,23 +98,17 @@
         </section>
 
         <section id="skills" class="skills-section">
-            <h2>My Skills</h2>
+            <h2>Technical Skills</h2>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <ul>
-                        <li>C++</li>
-                        <li>C</li>
-                        <li>JavaScript</li>
-                        <li>SQL</li>
-                    </ul>
-                </div>
                 <div class="skill-category">
                     <h3>Frontend</h3>
                     <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript (ES6+)</li>
                         <li>React.js</li>
+                        <li>Vite</li>
+                        <li>Responsive Web Design</li>
                     </ul>
                 </div>
                 <div class="skill-category">
@@ -90,44 +116,66 @@
                     <ul>
                         <li>Node.js</li>
                         <li>Express.js</li>
+                        <li>REST APIs</li>
+                        <li>JWT Authentication</li>
+                        <li>Firebase Authentication</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3>Databases</h3>
                     <ul>
                         <li>MongoDB</li>
+                        <li>MongoDB Atlas</li>
                         <li>MySQL</li>
+                        <li>Room Database (SQLite)</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Coursework</h3>
+                    <h3>Languages</h3>
                     <ul>
-                        <li>Data Structures and Algorithms</li>
-                        <li>DBMS</li>
-                        <li>Operating Systems</li>
-                        <li>Computer Networks</li>
+                        <li>C++</li>
+                        <li>JavaScript</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>Postman</li>
+                        <li>Firebase</li>
+                        <li>VS Code</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section id="achievements" class="achievements-section">
-            <h2>Achievements & Certifications</h2>
+            <h2>DSA & Achievements</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3>Solved 500+ DSA Problems</h3>
-                        <p class="date">LeetCode, GFG, CodeChef</p>
-                        <p>Regular participant in LeetCode Weekly Contests and CodeChef Long Challenges. Strong grasp on Hash maps, Two Pointers, binary search, and stack-based problems. Achieved a peak LeetCode rating of 1500+.</p>
+                        <h3>500+ DSA Problems Solved</h3>
+                        <p class="date">LeetCode, GeeksforGeeks, CodeChef</p>
+                        <p>Strong problem solving skills in Arrays, Strings, Sliding Window, Two Pointers, Binary Search, Stack, Queue, Hash Maps, and Dynamic Programming. Focused on interview-style preparation and fast coding practice.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>LeetCode Rating 1700+</h3>
+                        <p class="date">Competitive Programming</p>
+                        <p>Maintains a consistent daily DSA practice habit and prepares for product-based company roles with algorithmic depth and optimization techniques.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="resume" class="resume-section">
-            <h2>My Resume</h2>
-            <p>Click the button below to view my full resume in a new tab.</p>
-            <a href="./assets/finalresume.pdf" target="_blank" class="btn">View Resume (PDF)</a>
+            <h2>Resume</h2>
+            <p>Download or view the latest resume from the shared Google Drive link.</p>
+            <a href="https://drive.google.com/file/d/1FJBhDCx_6Z2LR26iEMpodNF0uGus0MSz/view?usp=sharing" target="_blank" rel="noreferrer" class="btn">View Latest Resume</a>
         </section>
 
         <section id="contact" class="contact-section">
@@ -142,11 +190,40 @@
                 <div class="contact-info">
                     <p><i class="fas fa-envelope"></i> subhashtalluri68@gmail.com</p>
                     <p><i class="fas fa-phone"></i> +91 9032615075</p>
-                    <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/tallurisubhash" target="_blank">linkedin.com/in/tallurisubhash</a></p>
-                    <p><i class="fab fa-github"></i> <a href="https://github.com/Subhash-2005" target="_blank">github.com/Subhash-2005</a></p>
+                    <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/tallurisubhash" target="_blank" rel="noreferrer">linkedin.com/in/tallurisubhash</a></p>
+                    <p><i class="fab fa-github"></i> <a href="https://github.com/Subhash-2005" target="_blank" rel="noreferrer">github.com/Subhash-2005</a></p>
+                    <p><i class="fas fa-file-alt"></i> <a href="https://drive.google.com/file/d/1FJBhDCx_6Z2LR26iEMpodNF0uGus0MSz/view?usp=sharing" target="_blank" rel="noreferrer">Latest Resume</a></p>
+                    <p><i class="fas fa-code"></i> <a href="https://leetcode.com/u/subhash_03/" target="_blank" rel="noreferrer">LeetCode</a></p>
+                    <p><i class="fas fa-trophy"></i> <a href="https://www.codechef.com/users/subhash_05" target="_blank" rel="noreferrer">CodeChef</a></p>
+                    <p><i class="fas fa-user-graduate"></i> <a href="https://codolio.com/profile/subhash_39" target="_blank" rel="noreferrer">Codolio</a></p>
+                    <p><i class="fas fa-book"></i> <a href="https://www.geeksforgeeks.org/profile/subhashtac568" target="_blank" rel="noreferrer">GeeksforGeeks</a></p>
                 </div>
             </div>
         </section>
+
+        <div id="projectModal" class="project-modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+                <div class="modal-section">
+                    <h4>Key Technologies</h4>
+                    <div class="tech-stack" id="modalTechStack"></div>
+                </div>
+                <div class="modal-section">
+                    <h4>Core Features</h4>
+                    <ul id="modalFeatures"></ul>
+                </div>
+                <div class="modal-section">
+                    <h4>Responsibilities</h4>
+                    <ul id="modalResponsibilities"></ul>
+                </div>
+                <div class="project-links">
+                    <a id="modalLiveLink" href="#" target="_blank" class="btn">Live Demo</a>
+                    <a id="modalGithubLink" href="#" target="_blank" class="btn">GitHub</a>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="social-links">
