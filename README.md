@@ -79,14 +79,3 @@ Then open `http://localhost:8000` in your browser.
 
 - The project is static and does not require a backend server to run.
 - The contact form is configured to use FormSubmit.co for sending email messages.
-
-## Suggestions for Improvement
-
-- Add more polished project case studies with screenshots or videos.
-- Include deployment status and links for all featured projects.
-- Add testimonials or recommendations if available.
-- Add testing badges, performance optimizations, and SEO metadata.
-
----
-
-Created for Talluri Subhash's personal portfolio showcase.
